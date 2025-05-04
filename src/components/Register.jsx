@@ -1,7 +1,6 @@
 import React from "react";
 import { useAuth } from "../providers/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
 import { Link } from "react-router";
 
 const Register = () => {
@@ -10,7 +9,7 @@ const Register = () => {
     loading,
     error,
     signInWithGoogle,
-    signInWithFacebook,
+   
   } = useAuth();
 
   const handleRegister = (event) => {
@@ -35,11 +34,7 @@ const Register = () => {
       .catch((error) => console.error("Google sign-in error:", error));
   };
 
-  const handleFacebookSignIn = () => {
-    signInWithFacebook()
-      .then((result) => console.log("Facebook sign-in:", result.user))
-      .catch((error) => console.error("Facebook sign-in error:", error));
-  };
+ 
 
   return (
     <div>
@@ -83,13 +78,7 @@ const Register = () => {
                     >
                       <FaGoogle />
                     </Link>
-                    <Link
-                      
-                      onClick={handleFacebookSignIn}
-                      className="facebook hover:bg-blue-400 p-2 rounded-2xl hover:text-white "
-                    >
-                      <FaFacebook />
-                    </Link>
+                   
                     </div>
                     
                     

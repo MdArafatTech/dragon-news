@@ -1,13 +1,13 @@
 import React from "react";
 import { useAuth } from "../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const {
     signInUser,
     signInWithGoogle,
-    signInWithFacebook,
+    
     loading,
     error,
   } = useAuth();
@@ -39,14 +39,7 @@ const Login = () => {
       .catch((err) => console.error("Google login error:", err.message));
   };
 
-  const handleFacebookLogin = () => {
-    signInWithFacebook()
-      .then((result) => {
-        console.log("Facebook login:", result.user);
-        navigate("/dashboard");
-      })
-      .catch((err) => console.error("Facebook login error:", err.message));
-  };
+ 
 
   return (
     <div>
@@ -83,20 +76,14 @@ const Login = () => {
                   <div className="flex flex-col items-center gap-4 mt-4">
                     <p className="text-xl font-bold">Or login with:</p>
                     <div className="flex gap-6 text-3xl">
-                      <button
+                      <Link
                         type="button"
                         onClick={handleGoogleLogin}
                         className="google hover:bg-blue-400 p-2 rounded-2xl hover:text-white"
                       >
                         <FaGoogle />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={handleFacebookLogin}
-                        className="facebook hover:bg-blue-400 p-2 rounded-2xl hover:text-white"
-                      >
-                        <FaFacebook />
-                      </button>
+                      </Link>
+                      
                     </div>
                   </div>
 
@@ -126,4 +113,5 @@ const Login = () => {
 };
 
 export default Login;
+
 

@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-  FacebookAuthProvider,
+ 
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -22,7 +22,7 @@ const AuthContext = createContext();
 const auth = getAuth(app); // ✅ use only once
 
 const googleProvider = new GoogleAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
+
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -53,17 +53,7 @@ const AuthProvider = ({ children }) => {
       .finally(() => setLoading(false));
   };
 
-  // Facebook sign-in
-  const signInWithFacebook = () => {
-    setLoading(true);
-    setError(null);
-    return signInWithPopup(auth, facebookProvider)
-      .catch((err) => {
-        setError(err.message);
-        throw err;
-      })
-      .finally(() => setLoading(false));
-  };
+ 
 
   // Login user
   const signInUser = (email, password) => {
@@ -107,7 +97,7 @@ const AuthProvider = ({ children }) => {
     registerUser,
     signInUser,
     signInWithGoogle,
-    signInWithFacebook,
+    
     logOut, // ✅ include in context
   };
 
