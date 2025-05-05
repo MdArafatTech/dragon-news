@@ -4,6 +4,9 @@ const SingleNewsPage = () => {
     return (
         <div>
             This is a single news page
+            jgjyjk
+
+            
         </div>
     );
 };

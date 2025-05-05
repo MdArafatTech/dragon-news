@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
+const Author1 = () => {
     return (
         <div>
-           
+            This is author 1
         </div>
     );
 };
 
-export default Footer;
+export default Author1;

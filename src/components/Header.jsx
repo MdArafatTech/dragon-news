@@ -2,7 +2,8 @@ import { useState } from 'react';
 import logo from '../assets/logo.png';
 import moment from 'moment';
 import { useEffect } from 'react';
-import Menu from './Menu';
+import Marqueee from '../components/Marqueee';
+
 
 const Header = () => {
 
@@ -31,6 +32,9 @@ const Header = () => {
         <div className="timeDate text-[#333]">
           {time}
         </div>
+       
+
+       
   
       </div>
     );
