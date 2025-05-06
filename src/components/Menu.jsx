@@ -21,7 +21,7 @@ const Menu = () => {
             <Link to="/about">About</Link>
           </li>
           <li className="hover:scale-105 transition-transform">
-            <Link to="/career">Career</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 

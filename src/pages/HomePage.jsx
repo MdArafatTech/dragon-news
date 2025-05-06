@@ -11,7 +11,7 @@ import zone1 from "../assets/swimming.png";
 import zone2 from "../assets/class.png";
 import zone3 from "../assets/playground.png";
 import bg from "../assets/bg.png";
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -49,56 +49,56 @@ const Home = () => {
 
   return (
     <div>
-      <Marqueee></Marqueee>
+      
 
       <div className="content grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4 px-[5%] my-4">
-        <div className="left-sidebar  ">
+        <div className="left-sidebar col-span-2 lg:col-span-1">
           <h1 className="text-xl font-bold my-1 ">All Catagory</h1>
           <ul className="">
-            <a href="">
+            <a href="/nationalnews">
             <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100 ">
-              <a href="">National News</a>
+              National News
             </li>
             </a>
 
-            <a href=""><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Breaking News</a>
-            </li></a>
+            {/* <a href="/breakingnews"><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
+              Breaking News
+            </li></a> */}
 
-            <a href="">
+            <a href="/regularnews">
             <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Regular News</a>
+              Regular news
             </li>
             </a>
-            <a href="">
+            <a href="/internationalnews">
             <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">International News</a>
+              International News
             </li>
             </a>
-           <a href="">
+           <a href="/sports">
            <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Sports</a>
+              Sports
             </li>
            </a>
-            <a href=""><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Entertainment</a>
+            <a href="/entertainment"><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
+              Entertainment
             </li></a>
-            <a href=""><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Culture</a>
+            <a href="/culture"><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
+              Culture
             </li></a>
-            <a href="">
+            <a href="/arts">
             <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
-              <a href="">Arts</a>
+              Arts
             </li>
             </a>
           </ul>
 
-          <div className="sports ">
+          <div className="sports">
             <div className="one hover:scale-102 duration-[.5s]">
 
 
 
-              <a href="">
+              <a href="/Sports1">
                 <img className="my-3 w-full" src={one} alt="" />
 
                 <p className="font-bold text-xl">
@@ -115,7 +115,7 @@ const Home = () => {
             </div>
 
             <div className="one hover:scale-102 duration-[.5s]">
-              <a href="">
+              <a href="/sports2">
                 <img className="my-3 w-full" src={two} alt="" />
 
                 <p className="font-bold text-xl">
@@ -131,7 +131,7 @@ const Home = () => {
               </a>
             </div>
             <div className="one hover:scale-102 duration-[.5s]">
-              <a href="">
+              <a href="/sports3">
                 <img className="my-3 w-full" src={three} alt="" />
 
                 <p className="font-bold text-xl">
@@ -194,7 +194,7 @@ const Home = () => {
 
             <a href="/newspage1">
               <p className="text-xl font-bold mb-3">
-                Biden pledge Nearly $# Billion To Ukraim=ne In Largest U.S
+                Biden pledge Nearly $# Billion To Ukraine In Largest U.S
                 Military aid Package Yet
               </p>
               <img className="w-full" src={demo1} alt="" />
@@ -245,7 +245,7 @@ const Home = () => {
 
             <a href="/newspage2">
               <p className="text-xl font-bold mb-3">
-                Biden pledge Nearly $# Billion To Ukraim=ne In Largest U.S
+                Biden pledge Nearly $# Billion To Ukraine In Largest U.S
                 Military aid Package Yet
               </p>
               <img className="w-full" src={demo2} alt="" />
@@ -286,7 +286,7 @@ const Home = () => {
 
             <a href="/newspage3">
               <p className="text-xl font-bold mb-3">
-                Biden pledge Nearly $# Billion To Ukraim=ne In Largest U.S
+                Biden pledge Nearly $# Billion To Ukraine In Largest U.S
                 Military aid Package Yet
               </p>
               <img className="w-full" src={demo2} alt="" />
@@ -305,7 +305,7 @@ const Home = () => {
 
         </div>
 
-        <div className="right-sidebar ">
+        <div className="right-sidebar col-span-2 lg:col-span-1 ">
           <h1 className="text-xl font-bold my-1 ">Find Us on</h1>
 
           <div className="border border-zinc-200 rounded  my-4 ">
@@ -344,7 +344,7 @@ const Home = () => {
           </div>
 
           <div>
-            <a href="">
+            <a href="https://youtube.com/shorts/GbYjDX8TE9c?si=KJcLfMy8NV_sGfxU">
               <img src={bg} className="w-full rounded" alt="" />
             </a>
           </div>

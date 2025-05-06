@@ -23,7 +23,7 @@ const Login = () => {
     signInUser(email, password)
       .then((userCredential) => {
         console.log("User logged in:", userCredential.user);
-        navigate("/dashboard");
+        navigate("/");
       })
       .catch((err) => {
         console.error("Login error:", err.message);
@@ -34,7 +34,7 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log("Google login:", result.user);
-        navigate("/dashboard");
+        navigate("/");
       })
       .catch((err) => console.error("Google login error:", err.message));
   };

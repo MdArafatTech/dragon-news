@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuth } from "../providers/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router-dom"; // ✅ Fixed import
 
 const Register = () => {
   const {
@@ -9,8 +9,9 @@ const Register = () => {
     loading,
     error,
     signInWithGoogle,
-   
   } = useAuth();
+
+  const navigate = useNavigate(); // ✅ Add navigate
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -22,6 +23,7 @@ const Register = () => {
       .then((userCredential) => {
         console.log("User registered:", userCredential.user);
         form.reset();
+        navigate("/"); // ✅ Redirect to homepage
       })
       .catch((error) => {
         console.error("Error registering user:", error.code, error.message);
@@ -30,11 +32,12 @@ const Register = () => {
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-      .then((result) => console.log("Google sign-in:", result.user))
+      .then((result) => {
+        console.log("Google sign-in:", result.user);
+        navigate("/"); // ✅ Redirect to homepage
+      })
       .catch((error) => console.error("Google sign-in error:", error));
   };
-
- 
 
   return (
     <div>
@@ -42,7 +45,6 @@ const Register = () => {
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register now!</h1>
-           
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
@@ -71,19 +73,15 @@ const Register = () => {
                   <div className="flex flex-col items-center text-4xl gap-3 ">
                     <p className="text-xl font-bold">Or register with:</p>
                     <div className="flex gap-8 ">
-                    <Link
-                      
-                      onClick={handleGoogleSignIn}
-                      className="google hover:bg-blue-400 p-2 rounded-2xl hover:text-white "
-                    >
-                      <FaGoogle />
-                    </Link>
-                   
+                      <Link
+                        onClick={handleGoogleSignIn}
+                        className="google hover:bg-blue-400 p-2 rounded-2xl hover:text-white "
+                      >
+                        <FaGoogle />
+                      </Link>
                     </div>
-                    
-                    
-                    </div>
-                  
+                  </div>
+
                   <button
                     type="submit"
                     disabled={loading}

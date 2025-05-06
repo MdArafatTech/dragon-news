@@ -5,3 +5,50 @@
 @plugin "daisyui" {
    themes: light --default, light --prefersdark;
  }
+
+
+
+
+
+
+
+
+ /* cube.css */
+
+.cube {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(20deg);
+  animation: spinCube 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size:1.7rem;
+  color: rgb(250, 6, 6);
+  background: linear-gradient(135deg, #2563eb, #577aeb);
+  border:2px groove rgb(230, 2, 255);
+  border-radius:8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Positioning cube faces */
+.front  { transform: translateZ(75px); }
+.back   { transform: rotateY(180deg) translateZ(75px); }
+.right  { transform: rotateY(90deg) translateZ(75px); }
+.left   { transform: rotateY(-90deg) translateZ(75px); }
+.top    { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+@keyframes spinCube {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
