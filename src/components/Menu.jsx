@@ -15,13 +15,13 @@ const Menu = () => {
         {/* Navigation Links */}
         <ul className="flex flex-wrap justify-center gap-4 text-gray-700">
           <li className="hover:scale-105 transition-transform">
-            <Link to="/">Home</Link>
+            <a href="/">Home</a>
           </li>
           <li className="hover:scale-105 transition-transform">
-            <Link to="/about">About</Link>
+            <a href="/about">About</a>
           </li>
           <li className="hover:scale-105 transition-transform">
-            <Link to="/contact">Contact</Link>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
 
@@ -37,9 +37,9 @@ const Menu = () => {
                 />
               </div>
               <span className="text-gray-800">{user.displayName || "User"}</span>
-              <Link to="/profile">
-                <button className="btn btn-sm btn-primary">Profile</button>
-              </Link>
+              
+                <a href="/profile"><button className="btn btn-sm btn-primary">Profile</button></a>
+             
               <button
                 onClick={logOut}
                 className="btn btn-sm hover:bg-blue-400 hover:text-white"

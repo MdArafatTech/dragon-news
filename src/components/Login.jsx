@@ -10,6 +10,7 @@ const Login = () => {
     
     loading,
     error,
+    resetPassword,
   } = useAuth();
 
   const navigate = useNavigate();
@@ -70,7 +71,20 @@ const Login = () => {
                     required
                   />
                   <div>
-                    <a className="link link-hover">Forgot password?</a>
+                  <button
+    type="button"
+    className="link link-hover text-blue-500 decoration-white hover:scale-102 duration-[.3s] font-semibold"
+    onClick={() => {
+      const email = prompt("Enter your email to reset password:");
+      if (email) {
+        resetPassword(email)
+          .then(() => alert("Check your email for reset instructions."))
+          .catch((err) => alert("Error: " + err.message));
+      }
+    }}
+  >
+    Forgot password?
+  </button>
                   </div>
 
                   <div className="flex flex-col items-center gap-4 mt-4">
@@ -113,5 +127,12 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+
+
 
 

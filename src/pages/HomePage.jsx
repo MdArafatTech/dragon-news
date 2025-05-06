@@ -61,9 +61,9 @@ const Home = () => {
             </li>
             </a>
 
-            {/* <a href="/breakingnews"><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
+            <a href="/breakingnews"><li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">
               Breaking News
-            </li></a> */}
+            </li></a>
 
             <a href="/regularnews">
             <li className=" py-2 opacity-60 text-center rounded-[5px] my-2 hover:bg-neutral-200 hover:opacity-100">

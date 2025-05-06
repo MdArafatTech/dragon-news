@@ -10,6 +10,8 @@ const About = () => {
 
       {/* 3D Animated Cube */}
       <div className="flex justify-center mb-12 my-20">
+        <a href="/">
+
         <div className="cube">
           <div className="face front">Dragon</div>
           <div className="face back">News</div>
@@ -18,6 +20,7 @@ const About = () => {
           <div className="face top">Live</div>
           <div className="face bottom">Report</div>
         </div>
+        </a>
       </div>
 
       <section className="mb-12">
@@ -50,7 +53,7 @@ const About = () => {
               his fearless coverage and commitment to truth, Awlad has reported on everything from international conflict zones
               to local elections. His work has inspired change and set standards in ethical journalism.
             </p>
-            <p className="mt-2 text-sm">Email: <a href="" className="text-blue-400 font-bold">awlad@dragonnews.com </a>| Twitter: <a href="" className="text-blue-400 font-bold">@AwladDragon</a></p>
+            <p className="mt-2 text-sm">Email: <a href="https://mail.google.com/mail/u/0/" className="text-blue-400 font-bold">awlad@dragonnews.com </a>| Twitter: <a href="https://twitter.com/" className="text-blue-400 font-bold">@AwladDragon</a></p>
           </div>
 
 
@@ -70,7 +73,7 @@ const About = () => {
               With a sharp eye for detail and a strong sense of empathy, Rahim delivers compelling reports that connect deeply with
               readers and viewers alike.
             </p>
-            <p className="mt-2 text-sm">Email: <a href="" className="text-blue-400 font-bold">awlad@dragonnews.com </a>| Twitter: <a href="" className="text-blue-400 font-bold">@AwladDragon</a></p>
+            <p className="mt-2 text-sm">Email: <a href="https://mail.google.com/mail/u/0/" className="text-blue-400 font-bold">awlad@dragonnews.com </a>| Twitter: <a href="https://twitter.com/" className="text-blue-400 font-bold">@AwladDragon</a></p>
           </div>
         </div>
 

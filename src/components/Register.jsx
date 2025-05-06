@@ -66,8 +66,11 @@ const Register = () => {
                     placeholder="Password"
                     required
                   />
-                  <div>
-                    <a className="link link-hover">Already Have an Account?</a>
+                  <div className="hover:scale-102 duration-[.3s]">
+                  <Link to="/login" className="link link-hover text-blue-500 decoration-white font-semibold">
+  Already have an account?
+</Link>
+
                   </div>
 
                   <div className="flex flex-col items-center text-4xl gap-3 ">
@@ -101,3 +104,6 @@ const Register = () => {
 };
 
 export default Register;
+
+
+

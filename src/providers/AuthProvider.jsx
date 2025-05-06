@@ -15,7 +15,13 @@ import app from "../firebase/firebase.config";
 
 // logout
 import { signOut } from "firebase/auth";
+// forgot passward
+import { sendPasswordResetEmail } from "firebase/auth";
 
+
+const resetPassword = (email) => {
+  return sendPasswordResetEmail(auth, email);
+};
 
 
 const AuthContext = createContext();
@@ -97,6 +103,7 @@ const AuthProvider = ({ children }) => {
     registerUser,
     signInUser,
     signInWithGoogle,
+    resetPassword,
     
     logOut, // ✅ include in context
   };

@@ -29,6 +29,7 @@ import Culture from "../pages/Culture";
 import Arts from "../pages/Arts";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Profile from "../pages/Profile";
 
 
 
@@ -121,6 +122,11 @@ const Routes = createBrowserRouter([
       {
          path:"/arts",
          element:<Arts></Arts>
+      },
+
+      {
+        path:"/profile",
+        element:<Profile></Profile>
       },
 
 

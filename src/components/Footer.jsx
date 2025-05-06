@@ -113,9 +113,9 @@ const Footer = () => {
 
 
 <div className="policy grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 items-center gap-5">
-<a className=' hover:text-blue-500 transition duration-100' href="">Terms of use</a>
-<a className=' hover:text-blue-500 transition duration-100' href="">Privacy Policy</a>
-<a className=' hover:text-blue-500 transition duration-100' href="">Cookie Policy</a>
+<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Terms_of_Use.pdf">Terms of use</a>
+<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Privacy_Policy.pdf">Privacy Policy</a>
+<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Cookie_Policy.pdf">Cookie Policy</a>
 </div>
 
 
