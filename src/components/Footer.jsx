@@ -1,4 +1,8 @@
 import React from 'react';
+import terms from "../assets/Terms_of_Use.pdf"
+import privacy from "../assets/Privacy_Policy.pdf"
+import cookie from "../assets/Cookie_Policy.pdf"
+
 
 
 const Footer = () => {
@@ -113,9 +117,9 @@ const Footer = () => {
 
 
 <div className="policy grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 items-center gap-5">
-<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Terms_of_Use.pdf">Terms of use</a>
-<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Privacy_Policy.pdf">Privacy Policy</a>
-<a className=' hover:text-blue-500 transition duration-100' href="/src/assets/Cookie_Policy.pdf">Cookie Policy</a>
+<a className=' hover:text-blue-500 transition duration-100' href={terms}>Terms of use</a>
+<a className=' hover:text-blue-500 transition duration-100' href={privacy}>Privacy Policy</a>
+<a className=' hover:text-blue-500 transition duration-100' href={cookie}>Cookie Policy</a>
 </div>
 
 

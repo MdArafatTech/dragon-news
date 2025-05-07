@@ -38,7 +38,9 @@
   border:2px groove rgb(230, 2, 255);
   border-radius:8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
 }
+
 
 /* Positioning cube faces */
 .front  { transform: translateZ(75px); }
